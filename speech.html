@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speech to Text</title>
+</head>
+<body>
+  <input type="text" id="transcription" />
+  <button type="button" onclick="startRecognition()">Start Recognition</button>
+
+  <script>
+    const recognition = new webkitSpeechRecognition();
+
+    recognition.onresult = function(event) {
+      const finalTranscript = event.results[0][0].transcript;
+      document.getElementById('transcription').value = finalTranscript;
+    };
+
+    function startRecognition() {
+      recognition.start();
+    }
+  </script>
+</body>
+</html>

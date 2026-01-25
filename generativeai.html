@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vertex Generative AI Prompt</title>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+    // Create a JavaScript function to call the Vertex AI API and generate text.
+    function generateText(prompt) {
+      // Create a new XMLHttpRequest object.
+      var xhr = new XMLHttpRequest();
+
+      // Set the request headers.
+      xhr.setRequestHeader("Authorization", "Bearer YOUR_JWT_TOKEN");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      // Set the request body.
+      var requestBody = JSON.stringify({
+        prompt: prompt
+      });
+
+      // Open the request.
+      xhr.open("POST", "https://vertex-ai.googleapis.com/v1/projects/YOUR_PROJECT_ID/locations/us-central1/models/text-bison/generate");
+
+      // Send the request.
+      xhr.send(requestBody);
+
+      // Handle the response.
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // The request was successful.
+          var response = JSON.parse(xhr.responseText);
+
+          // Get the generated text.
+          var generatedText = response.generatedText;
+
+          // Display the generated text on the page.
+          document.getElementById("generatedText").innerHTML = generatedText;
+        } else {
+          // The request failed.
+          console.error(xhr.statusText);
+        }
+      };
+    }
+
+    // Call the generateText() function when the page loads.
+    window.onload = function() {
+      generateText("Write a poem about a cat.");
+    };
+  </script>
+</head>
+<body>
+  <div id="generatedText"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text-to-Speech Example</title>
+  </head>
+  <body>
+    <h1>Text-to-Speech Example</h1>
+    <textarea id="text-to-read" rows="4" cols="50">Hello, this is a test of Text-to-Speech.</textarea>
+    <button id="speak-button">Speak</button>
+    
+    <script>
+      const textToRead = document.getElementById('text-to-read');
+      const speakButton = document.getElementById('speak-button');
+      
+      // Check if the browser supports the Web Speech API
+      if ('speechSynthesis' in window) {
+        const synth = window.speechSynthesis;
+        
+        speakButton.addEventListener('click', () => {
+          // Create a new speech synthesis utterance
+          const utterance = new SpeechSynthesisUtterance(textToRead.value);
+          
+          // Speak the text
+          synth.speak(utterance);
+        });
+      } else {
+        alert("Sorry, your browser doesn't support the Web Speech API. Please try a different browser.");
+      }
+    </script>
+  </body>
+</html>
