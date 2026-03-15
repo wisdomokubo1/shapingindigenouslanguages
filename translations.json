@@ -1,0 +1,49 @@
+[
+  {
+    "id": "01",
+    "word": "How are you?",
+    "translation": "Lafiya lau?",
+    "language": "Hausa",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/hausa1.mp3"
+  },
+  
+  {
+    "id": "02",
+    "word": "What's up?",
+    "translation": "Me ke faruwa?",
+    "language": "Hausa",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/hausa2.m4a"
+  },
+  
+    {
+    "id": "001",
+    "word": "How are you?",
+    "translation": "Bawo ni o se wa?",
+    "language": "Yoruba",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/yoruba1.m4a"
+  },
+  
+      {
+    "id": "002",
+    "word": "What's up?",
+    "translation": "Kilode?",
+    "language": "Yoruba",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/yoruba2.m4a"
+  },
+  
+    {
+    "id": "0001",
+    "word": "How are you?",
+    "translation": "Kedu ka ị mere?",
+    "language": "Igbo",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/igbo1.m4a"
+  },
+  
+      {
+    "id": "0002",
+    "word": "What's up?",
+    "translation": "Kedu nke na-eme?",
+    "language": "Igbo",
+    "audio": "https://raw.githubusercontent.com/wisdomokubo1/shapingindigenouslanguages/main/audio/igbo2.m4a"
+  }
+]
